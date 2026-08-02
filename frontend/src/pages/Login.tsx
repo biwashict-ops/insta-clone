@@ -62,12 +62,12 @@ export default function Login() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            gap: "64px",
+            gap: "0",
             maxWidth: "1200px",
             width: "100%",
           }}
         >
-          {/* LEFT SIDE */}
+          {/* LEFT SIDE — hidden on mobile */}
           <div
             style={{
               flex: 1,
@@ -166,7 +166,7 @@ export default function Login() {
             </div>
           </div>
 
-          {/* VERTICAL DIVIDER - explicit height so it's always visible */}
+          {/* VERTICAL DIVIDER — hidden on mobile */}
           <div
             className="hidden md:block"
             style={{
@@ -178,15 +178,17 @@ export default function Login() {
             }}
           />
 
-          {/* RIGHT SIDE */}
+          {/* RIGHT SIDE — full width on mobile */}
           <div
             style={{
-              width: "592.1px",
+              width: "100%",
+              maxWidth: "592.1px",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
               flexShrink: 0,
+              padding: "0 16px",
             }}
           >
             <h1
@@ -199,7 +201,8 @@ export default function Login() {
                 fontFamily:
                   'Optimistic, "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif',
                 lineHeight: "21.9997px",
-                width: "488.1px",
+                width: "100%",
+                maxWidth: "488.1px",
                 wordBreak: "break-word",
               }}
             >
@@ -213,14 +216,15 @@ export default function Login() {
                 display: "flex",
                 flexDirection: "column",
                 gap: "8px",
-                width: "488.1px",
+                width: "100%",
+                maxWidth: "488.1px",
                 alignItems: "center",
               }}
             >
               {/* Email Input */}
               <div
                 style={{
-                  width: "488.1px",
+                  width: "100%",
                   height: "60px",
                   minHeight: "60px",
                   padding: "10px 16px",
@@ -266,7 +270,7 @@ export default function Login() {
               {/* Password Input */}
               <div
                 style={{
-                  width: "488.1px",
+                  width: "100%",
                   height: "60px",
                   minHeight: "60px",
                   padding: "10px 16px",
@@ -348,7 +352,7 @@ export default function Login() {
                 type="submit"
                 disabled={!isFormValid || loading}
                 style={{
-                  width: "488.1px",
+                  width: "100%",
                   padding: "8px 0",
                   borderRadius: "8px",
                   fontSize: "14px",
@@ -374,7 +378,8 @@ export default function Login() {
               style={{
                 textAlign: "center",
                 marginTop: "12px",
-                width: "488.1px",
+                width: "100%",
+                maxWidth: "488.1px",
               }}
             >
               <a
@@ -395,7 +400,8 @@ export default function Login() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                width: "488.1px",
+                width: "100%",
+                maxWidth: "488.1px",
                 margin: "16px 0",
               }}
             >
@@ -421,7 +427,8 @@ export default function Login() {
             <button
               type="button"
               style={{
-                width: "488.1px",
+                width: "100%",
+                maxWidth: "488.1px",
                 height: "44px",
                 display: "flex",
                 alignItems: "center",
@@ -456,7 +463,8 @@ export default function Login() {
             <button
               type="button"
               style={{
-                width: "488.1px",
+                width: "100%",
+                maxWidth: "488.1px",
                 height: "44px",
                 display: "flex",
                 alignItems: "center",
@@ -514,26 +522,11 @@ export default function Login() {
       <footer
         style={{
           borderTop: "1px solid #DBDBDB",
-          padding: "0 16px",
+          padding: "16px",
           flexShrink: 0,
-          height: "135px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-end",
         }}
       >
-        <div
-          style={{
-            maxWidth: "1152px",
-            width: "100%",
-            margin: "0 auto",
-            marginBottom: "52px",
-            height: "83px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-start",
-          }}
-        >
+        <div style={{ maxWidth: "1152px", margin: "0 auto" }}>
           <div
             style={{
               display: "flex",
