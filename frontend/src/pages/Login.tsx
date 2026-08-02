@@ -71,7 +71,7 @@ export default function Login() {
           <div
             style={{
               flex: 1,
-              display: "flex",
+              // REMOVED: display: "flex" — let Tailwind handle this!
               flexDirection: "column",
               alignItems: "flex-start",
               justifyContent: "center",
